@@ -1,8 +1,11 @@
 .container {
+    width: 175px;
+    height: 500px;
+    border-radius: 30px;
     background: black;
 }
 
-.h1 {
+h1 {
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -10,16 +13,19 @@
 .red {
     width: 150px;
     height: 150px;
+    margin-top: 20px;
     background: red;
 }
 .green {
     width: 150px;
     height: 150px;
+    margin: 0 auto;
     background: green;
 }
 .yellow {
     width: 150px;
     height: 150px;
+    margin: 0 auto;
     background: yellow;
 }
 

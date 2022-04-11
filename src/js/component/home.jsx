@@ -16,8 +16,8 @@ const Home = () => {
 
 	return (
 		<div>
+			<h1>Traffic light with React</h1>
 			<div className="container">
-				<h1>Traffic light with React</h1>
 				<button
 					className={
 						"rounded-circle red " +
