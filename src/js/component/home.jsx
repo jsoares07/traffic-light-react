@@ -3,6 +3,25 @@ import React, { useState } from "react";
 //create your first component
 const Home = () => {
 	const [color, setColor] = useState("");
+	const [cycleRunning, setCycleRunning] = useState();
+
+	let i = 0;
+
+	let lightNames = ["red", "yellow", "green"];
+
+	const cycle = () => {
+		clearInterval(cycleRunning);
+		const interval = setInterval(function () {
+			let result = i % lightNames.length;
+			setColor(lightNames[result]);
+			i++;
+		}, 1000);
+		setCycleRunning(interval);
+	};
+
+	const onClick = () => {
+		cycle();
+	};
 
 	function clickRed() {
 		setColor("red");
@@ -36,6 +55,11 @@ const Home = () => {
 						(color === "green" ? "selected blink" : "")
 					}
 					onClick={clickGreen}></button>
+				<div className="row">
+					<button onClick={cycle} className="Cycle">
+						Cycle
+					</button>
+				</div>
 			</div>
 		</div>
 	);
